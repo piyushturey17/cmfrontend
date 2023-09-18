@@ -4,18 +4,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Dashboard from './components/Dashboard';
 import HeaderComponent from './components/layouts/HeaderComponent';
 import TestListComponent from './components/test/TestListComponent';
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {Routes,Route,BrowserRouter} from "react-router-dom";
+// import { Provider } from 'react-redux';
+// import store from './components/store';
 
 function App() {
   return (
-    <Router>
+    // <Router>
+    //     <HeaderComponent/>
+       
+    //     <Route path="/" component={Dashboard}/>
+    //     <Route path="/listTest" component={TestListComponent}/>
+     
+    // </Router>
+
+ 
+        <BrowserRouter>
         <HeaderComponent/>
-        {/* <Dashboard/> */}
-        <Route path="/" component={Dashboard}/>
-        <Route path="/listTest" component={TestListComponent}/>
-        {/* <TestListComponent/> */}
-        {/* <Route exact path="/listTest" component={TestListComponent} /> */}
-    </Router>
+        <Routes>
+          <Route path="/" element={<Dashboard/>}/>
+          <Route path="/listTest" element={<TestListComponent/>}/>
+        </Routes>
+      </BrowserRouter>
+
       
     
   );
