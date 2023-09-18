@@ -1,5 +1,5 @@
 // Changes in dashboard
-//this is branch 1
+//this is branch 2
 import './Dashboard.css';
 import React from "react";
 
