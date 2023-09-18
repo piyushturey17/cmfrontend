@@ -5,78 +5,89 @@ import img2 from './headerimg/customer-4.jpg';
 import img3 from './headerimg/Male User.png';
 import img4 from './headerimg/Frame 8.png';
 import img5 from './headerimg/Group 50.png';
+import {Link} from "react-router-dom";
 
 class HeaderComponent extends React.Component{
    render(){
     return(
-    <header class="header">
-    <section class="navigation-container">
-      <nav class="nav-bar">
-        <img src={img1} alt="" class="nav-logo-image"/>
+    <header className="header">
+    <section className="navigation-container">
+      <nav className="nav-bar">
+        <img src={img1} alt="" className="nav-logo-image"/>
 
 
-        <span class="navbardrop">
+        <span className="navbardrop">
         
-          <div><a href="trainer-dashboard.html" class="dashboard-button navbardropbtn">Dashboard</a></div>
+          {/* <div><a href="trainer-dashboard.html" className="dashboard-button navbardropbtn">Dashboard</a></div> */}
+          <div><Link className="dashboard-button navbardropbtn" to="/">Dashboard </Link></div>
 
           
         </span>
 
-        <span class="navbardrop">
-          <button class="navbardropbtn">Test Management</button>
-          <div class="navbardrop-content">
-            <div><a href="create-technology.html" class="create-technology-button">Create Technology</a></div>
-            <div><a href="list-question.html" class="list-technology-button">List Question</a></div>
-            <div><a href="create-test.html" class="create-test-button">Create Test</a></div>
+        <span className="navbardrop">
+          <button className="navbardropbtn">Test Management</button>
+          <div className="navbardrop-content">
+            <div><a href="create-technology.html" className="create-technology-button">Create Technology</a></div>
+            <div><a href="list-question.html" className="list-technology-button">List Question</a></div>
+            <div><a href="create-test.html" className="create-test-button">Create Test</a></div>
+            <div>
+              <Link className="create-test-button" to="/listTest">Test List </Link>
+
+              {/* <Link className="nav-link" to="/listTest">
+                                Test List
+                            </Link> */}
+              {/* <Link className="create-test-button" to="/listTest">Test List</Link> */}
+            </div>
+
            
 
           </div>
         </span>
 
-        <span class="navbardrop">
-          <button class="navbardropbtn">User Management</button>
-          <div class="navbardrop-content">
+        <span className="navbardrop">
+          <button className="navbardropbtn">User Management</button>
+          <div className="navbardrop-content">
             <div>Create User</div>
             <div>List User</div>
             <div>Update User</div>
           </div>
         </span>
 
-        <span class="navbardrop">
-          <button class="navbardropbtn">Reports</button>
-          <div class="navbardrop-content">
+        <span className="navbardrop">
+          <button className="navbardropbtn">Reports</button>
+          <div className="navbardrop-content">
             <div>Create Report</div>
             <div>Update Reports</div>
             <div>Reports List</div>
           </div>
         </span>
 
-        <img src={img2} alt="" class="user-image" onclick="toggleMenu()"/>
+        <img src={img2} alt="" className="user-image" onclick="toggleMenu()"/>
 
-        <div class="user-menu-wrap" id="subMenu">
-          <div class="user-sub-menu">
-            <div class="user-info">
+        <div className="user-menu-wrap" id="subMenu">
+          <div className="user-sub-menu">
+            <div className="user-info">
               <img src={img2} alt=""/>
               <h3>Jhon Paterik</h3>
             </div>
 
             <hr/>
 
-            <a href="#" class="sub-menu-link">
+            <a href="#" className="sub-menu-link">
               <img src={img3} alt=""/>
               <p>Edit Profile</p>
               <span></span>
             </a>
-            <a href="#" class="sub-menu-link">
+            <a href="#" className="sub-menu-link">
               <img src={img4} alt=""/>
               <p>Settings</p>
               <span></span>
             </a>
            
-            <div class="logout-span">
+            <div className="logout-span">
               <div><img src={img5} alt=""/></div>
 
-              <div><a href="index.html" class="logout-button">Logout</a></div>
+              <div><a href="index.html" className="logout-button">Logout</a></div>
             </div>
 
           </div>
