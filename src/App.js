@@ -10,14 +10,6 @@ import {Routes,Route,BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
-    // <Router>
-    //     <HeaderComponent/>
-       
-    //     <Route path="/" component={Dashboard}/>
-    //     <Route path="/listTest" component={TestListComponent}/>
-     
-    // </Router>
-
  
         <BrowserRouter>
         <HeaderComponent/>
