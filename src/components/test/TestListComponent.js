@@ -3,6 +3,13 @@ import TestListItemComponent from "./TestListItemComponent";
 // import '../test/TestListComponent.css';
 
 class TestListComponent extends React.Component{
+   constructor(){
+    super();
+    this.state={
+        testName:"Dummy Test",
+
+    }
+   }
     render(){
         return(
             
@@ -17,7 +24,7 @@ class TestListComponent extends React.Component{
                         <hr />
     
                         
-                            <TestListItemComponent/>
+                            <TestListItemComponent testName={this.state.testName}/>
                         
     
                     </div>

@@ -6,6 +6,10 @@ import img3 from './headerimg/Male User.png';
 import img4 from './headerimg/Frame 8.png';
 import img5 from './headerimg/Group 50.png';
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+=======
+import CreatTestButton from "../test/CreateTestButton";
+>>>>>>> checkingbranch
 
 class HeaderComponent extends React.Component{
    render(){
@@ -29,6 +33,7 @@ class HeaderComponent extends React.Component{
           <div className="navbardrop-content">
             <div><a href="create-technology.html" className="create-technology-button">Create Technology</a></div>
             <div><a href="list-question.html" className="list-technology-button">List Question</a></div>
+<<<<<<< HEAD
             <div><a href="create-test.html" className="create-test-button">Create Test</a></div>
             <div>
               <Link className="create-test-button" to="/listTest">Test List </Link>
@@ -37,6 +42,17 @@ class HeaderComponent extends React.Component{
                                 Test List
                             </Link> */}
               {/* <Link className="create-test-button" to="/listTest">Test List</Link> */}
+=======
+            {/* <div><a href="create-test.html" className="create-test-button">Create Test</a></div> */}
+
+            {/* <div>
+              <Link to="/addTest" className="create-test-button">Create Test</Link>
+            </div> */}
+            <CreatTestButton/>
+
+            <div>
+              <Link className="list-technology-button" to="/listTest">Test List </Link>
+>>>>>>> checkingbranch
             </div>
 
            

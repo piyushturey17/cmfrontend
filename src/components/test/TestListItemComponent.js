@@ -11,7 +11,7 @@ class TestListItemComponent extends React.Component{
                         <span className="mx-auto">JT01</span>
                     </div>
                     <div className="col-lg-6 col-md-4 col-8">
-                        <h3>Java Test</h3>
+                        <h3>{this.props.testName}</h3>
                         <p>Java Test On OOPs Concept</p>
                     </div>
                     <div className="col-md-4 d-none d-lg-block">
