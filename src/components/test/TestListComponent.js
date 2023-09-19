@@ -4,7 +4,6 @@ import TestListItemComponent from "./TestListItemComponent";
 
 class TestListComponent extends React.Component{
     render(){
-        // const {project} = this.props;
         return(
             
             <div className="projects">
@@ -13,16 +12,13 @@ class TestListComponent extends React.Component{
                     <div className="col-md-12">
                         <h1 className="display-4 text-center">Test List</h1>
                         <br />
-                        {/* <a href="ProjectForm.html" className="btn btn-lg btn-info">
-                            Create Test
-                        </a> */}
+                       
                         <br />
                         <hr />
     
-                         {/* Project Item Component */}
-                            {/* TestListItemComponent */}
+                        
                             <TestListItemComponent/>
-                         {/* End of Project Item Component  */}
+                        
     
                     </div>
                 </div>
@@ -33,3 +29,4 @@ class TestListComponent extends React.Component{
 }
 
 export default TestListComponent;
+
