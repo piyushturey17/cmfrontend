@@ -1,0 +1,33 @@
+.list-flex{
+    display: flex;
+}
+
+.custom-flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* You can adjust the margin as needed */
+   color: black !important;
+
+    
+}
+
+.custom-flex-box a:hover{
+    color: blue;
+}
+.red{
+    color: red;
+}
+
+
+
+.custom-flex-box a{
+    /* color: rgb(76, 68, 68); */
+    margin-right: 1rem;
+}
+
+
+
+.background{
+    background-color: rgb(216, 216, 214);
+}

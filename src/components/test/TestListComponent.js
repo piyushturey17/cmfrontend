@@ -1,30 +1,35 @@
 import React from "react";
 import TestListItemComponent from "./TestListItemComponent";
 // import '../test/TestListComponent.css';
+import { getTests } from "../../actions/TestAction";
+import {connect} from "react-redux";
 
 class TestListComponent extends React.Component{
-   constructor(){
-    super();
-    this.state={
-        testName:"Dummy Test",
-
-    }
-   }
+ componentDidMount(){
+    this.props.getTests();
+ }
+   
     render(){
+        const {tests} = this.props.tests;
         return(
             
             <div className="projects">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 className="display-4 text-center">Test List</h1>
+                        {/* <h1 className="display-4 text-center">Test List</h1> */}
+                        <br/>
+                        <br/>
+                        <h1 className="text-body-secondary font-weight-bold text-center">Test List</h1>
                         <br />
                        
-                        <br />
-                        <hr />
-    
+                      
                         
-                            <TestListItemComponent testName={this.state.testName}/>
+    
+                        {tests.map((test)=>(
+                            <TestListItemComponent key={test.id} test={test}/>
+                        ))}
+                            
                         
     
                     </div>
@@ -34,6 +39,8 @@ class TestListComponent extends React.Component{
         );
     }
 }
-
-export default TestListComponent;
+const mapStateToProps=(state)=>({
+    tests:state.tests,
+})
+export default connect(mapStateToProps,{getTests})(TestListComponent);
 
