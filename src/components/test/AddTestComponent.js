@@ -1,4 +1,8 @@
 import React from "react";
+import { createTest } from "../../actions/TestAction";
+import {connect} from "react-redux";
+import withRouter from "../commons/withRouter";
+
 class AddTestComponent extends React.Component{
    constructor(){
     super();
@@ -6,7 +10,8 @@ class AddTestComponent extends React.Component{
     testIdentifier:"",
     testdescription:"",
     test_start_date:"",
-    test_end_date:""}
+    test_end_date:"",
+    };
    }
    
    onChange = (event)=>{
@@ -23,7 +28,9 @@ class AddTestComponent extends React.Component{
     test_end_date:this.state.test_end_date}
     
     //Call axios method over here to send the call on backend
-    console.log(newTest);
+    this.props.createTest(newTest)
+    this.props.navigate("/listTest")
+    // console.log(newTest);
    }
     render(){
         return(
@@ -94,4 +101,4 @@ class AddTestComponent extends React.Component{
         )
     }
 }
-export default AddTestComponent;
+export default connect(null,{createTest}) (withRouter(AddTestComponent));
