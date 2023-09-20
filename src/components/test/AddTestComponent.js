@@ -30,50 +30,55 @@ class AddTestComponent extends React.Component{
             <div className="project">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-8 m-auto">
-                        <h5 className="display-4 text-center">Create Test</h5>
-                        <hr />
+                    <div className="col-md-8 m-auto ">
+                        <br/>
+                        <h5 className="h1 text-center">Create Test</h5>
+                        
                         <form onSubmit={this.onSubmit}>
-                            <div className="form-group">
+                            <div className="form-group ">
                                 <input type="text" 
-                                className="form-control form-control-lg "
+                                className="form-control form-control-lg background "
                                  placeholder="Test Name" 
                                  name="testName"
                                  value={this.state.testName}
                                  onChange={this.onChange}
                                  />
                             </div>
+                            <br/>
                             <div className="form-group">
                                 <input type="text" 
-                                className="form-control form-control-lg" 
+                                className="form-control form-control-lg background" 
                                 placeholder="Unique Test ID"
                                 name="testIdentifier"
                                 value={this.state.testIdentifier}
                                 onChange={this.onChange}
                                      />
                             </div>
+                            <br/>
                             {/* disabled for Edit Only!! remove "disabled" for the Create operation */}
                             <div className="form-group">
-                                <textarea className="form-control form-control-lg"
+                                <textarea className="form-control form-control-lg background"
                                  placeholder="Test Description"
                                  name="testdescription"
                                  value={this.state.testdescription}
                                  onChange={this.onChange}
                                  ></textarea>
                             </div>
+                            <br/>
                             <h6>Start Date</h6>
                             <div className="form-group">
                                 <input type="date" 
-                                className="form-control form-control-lg" 
+                                className="form-control form-control-lg background" 
                                 name="test_start_date"
                                 value={this.state.test_start_date}
                                 onChange={this.onChange}
                                 />
                             </div>
+                            <br/>
                             <h6>Estimated End Date</h6>
                             <div className="form-group">
                                 <input type="date" 
-                                className="form-control form-control-lg"
+                                className="form-control form-control-lg background"
                                  name="test_end_date" 
                                  value={this.state.test_end_date}
                                  onChange={this.onChange}
