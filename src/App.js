@@ -9,6 +9,7 @@ import {Routes,Route,BrowserRouter} from "react-router-dom";
 import AddTestComponent from './components/test/AddTestComponent';
 import { Provider } from 'react-redux';
 import store from './store';
+import UpdateTestComponent from './components/test/UpdateTestComponent';
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard/>}/>
             <Route path="/listTest" element={<TestListComponent/>}/>
-            {/* <Route path="/createTest" element={<CreateTestComponent/>}/> */}
             <Route path="/addTest" element={<AddTestComponent/>}/>
+            <Route path="/updateTest/:id" element={<UpdateTestComponent/>}/>
           </Routes>
          </BrowserRouter>
       </Provider>

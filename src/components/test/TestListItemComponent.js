@@ -1,7 +1,14 @@
 import React from "react";
 import '../test/TestListItemComponent.css';
+import { connect } from "react-redux";
+import {deleteTest} from "../../actions/TestAction";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class TestListItemComponent extends React.Component{
+    onDeleteClick=(id)=>{
+        this.props.deleteTest(id);
+    }
     render(){
         const{test} = this.props;
         return(
@@ -24,16 +31,16 @@ class TestListItemComponent extends React.Component{
                                     <i className="fa fa-flag-checkered pr-1">Project Board </i>
                                 </li>
                             </a> */}
-                            <a href="#">
+                            <Link to={`/updateTest/${test.testIdentifier}`}>
                                 <li className="list-group-item update">
                                     <i className="fa fa-edit pr-1 ">Update Test</i>
                                 </li>
-                            </a>
-                            <a href="">
-                                <li className="list-group-item delete red">
+                            </Link>
+                            
+                                <li className="list-group-item delete red" onClick={this.onDeleteClick.bind(this,test.testIdentifier)} >
                                     <i className="fa fa-minus-circle pr-1">Delete Test</i>
                                 </li>
-                            </a>
+                            
                         </ul>
                     </div>
                 </div>
@@ -43,4 +50,8 @@ class TestListItemComponent extends React.Component{
         );
     }
 }
-export default TestListItemComponent;
+TestListItemComponent.propTypes={
+    deleteTest:PropTypes.func.isRequired,
+}
+
+export default connect(null,{deleteTest}) (TestListItemComponent);
