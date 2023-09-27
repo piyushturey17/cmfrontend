@@ -10,6 +10,9 @@ import AddTestComponent from './components/test/AddTestComponent';
 import { Provider } from 'react-redux';
 import store from './store';
 import UpdateTestComponent from './components/test/UpdateTestComponent';
+import AddBatchComponent from './components/batch/AddBatchComponent';
+import BatchListComponent from './components/batch/BatchListComponent';
+import UpdateBatchComponent from './components/batch/UpdateBatchComponent';
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
             <Route path="/listTest" element={<TestListComponent/>}/>
             <Route path="/addTest" element={<AddTestComponent/>}/>
             <Route path="/updateTest/:id" element={<UpdateTestComponent/>}/>
+            {/* <Route path="/listTest" element={<BatchListComponent/>}/> */}
+            <Route path="/addBatch" element={<AddBatchComponent/>}/>
+            <Route path="/listBatch" element={<BatchListComponent/>}/>
+            <Route path="/updateBatch/:id" element={<UpdateBatchComponent/>}/>
           </Routes>
          </BrowserRouter>
       </Provider>

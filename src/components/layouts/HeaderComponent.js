@@ -7,6 +7,7 @@ import img4 from './headerimg/Frame 8.png';
 import img5 from './headerimg/Group 50.png';
 import {Link} from "react-router-dom";
 import CreatTestButton from "../test/CreateTestButton";
+import CreateBatchButton from "../batch/CreateBatchButton";
 
 class HeaderComponent extends React.Component{
    render(){
@@ -47,11 +48,18 @@ class HeaderComponent extends React.Component{
         </span>
 
         <span className="navbardrop">
-          <button className="navbardropbtn">User Management</button>
+          <button className="navbardropbtn">Batch Management</button>
           <div className="navbardrop-content">
-            <div>Create User</div>
-            <div>List User</div>
-            <div>Update User</div>
+            {/* <div>Create Batch</div> */}
+            <div>
+            <CreateBatchButton/>
+              </div> 
+            
+            {/* <div>List Batch</div> */}
+            <div>
+              <Link className="list-technology-button" to="/listBatch">Batch List </Link>
+            </div>
+            <div>Update Batch</div>
           </div>
         </span>
 
